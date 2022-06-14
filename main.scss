@@ -1,0 +1,107 @@
+@import "null.scss";
+$mainColor: #070707;
+$secondColor: #828282;
+
+@font-face {
+    font-family: "Gilroy Medium";
+    src: url(../src/Font/Gilroy-Medium.woff2) format("woff2"),
+         url(../src/Font/Gilroy-Medium.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url(../src/Font/Gilroy-Bold.woff2) format("woff2"),
+         url(../src/Font/Gilroy-Bold.woff) format("woff");
+}
+
+.wrapper {
+    background-color: white;
+}
+
+.container {
+    max-width: 1000px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 0 auto;
+    
+}
+
+.menu {
+    &::after {
+        content: "";
+        display: flex;
+        width: 100%;
+        height: 1px;
+        background: $secondColor;
+    } 
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 31px;
+    padding-bottom: 31px;
+       
+    
+    .nav__item {
+        font-family: 'Gilroy-Bold', sans-serif;
+        font-size: 18px;
+    }
+
+    .nav__link {
+        text-decoration: none;
+        color: $secondColor;
+        &:hover {
+            color: $mainColor;
+        }
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 40px;
+}
+
+.info__name {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.info__years {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-style: 18px;
+    margin-bottom: 8px;
+}
+
+.info__lang {
+    display: flex;
+    transform: rotate(-0.25turn);
+    transform-origin: top right;
+    margin-bottom: 55px;
+    margin-right: 20px;
+    gap: 5px;
+
+    .custom-radio {
+        display: none;
+    }
+
+    .custom-radio[type=radio]:checked + .info__link {
+        color: $mainColor;
+    }
+}
+
+.info__link {
+    text-decoration: none;
+    font-family: 'Gilroy-Bold', sans-serif;
+    text-transform: uppercase;
+    color: $secondColor;
+    .info__label {
+        cursor: pointer;
+    }
+}
+
