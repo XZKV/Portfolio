@@ -14,8 +14,12 @@ $secondColor: #828282;
          url(../src/Font/Gilroy-Bold.woff) format("woff");
 }
 
-.wrapper {
+.wrapper-primary {
     background-color: white;
+}
+
+.wrapper-second {
+    background-color: #F6F6F6;
 }
 
 .container {
@@ -74,7 +78,7 @@ $secondColor: #828282;
 
 .info__years {
     font-family: 'Gilroy-Medium', sans-serif;
-    font-style: 18px;
+    font-size: 18px;
     margin-bottom: 8px;
 }
 
@@ -105,3 +109,30 @@ $secondColor: #828282;
     }
 }
 
+.photo {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.about {
+    height: 500px;
+    max-width: 450px;
+    margin: 0 auto;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about__header {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 34px;
+}
+
+.about__content {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
